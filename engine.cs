@@ -74,6 +74,11 @@ namespace JSparkerEngine
             return engine[engineID];
         }
 
+        public void setJSEngine(Engine e, int id)
+        {
+            engine[id] = e;
+        }
+
         public int addJSEngine(Engine eng)
         {
             engine.Add(eng);
