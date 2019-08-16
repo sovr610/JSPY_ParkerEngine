@@ -1,0 +1,421 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "AdvancedStringBuilder/0.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.Core/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll": {
+            "locale": "ru-ru"
+          }
+        }
+      },
+      "JavaScriptEngineSwitcher.Jint/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0",
+          "JavaScriptEngineSwitcher.Core": "3.1.0",
+          "Jint": "2.11.58"
+        },
+        "compile": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Jint.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Jint.dll": {}
+        }
+      },
+      "Jint/2.11.58": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Jint.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Jint.dll": {}
+        }
+      },
+      "Jint.CommonJS/1.0.14": {
+        "type": "package",
+        "dependencies": {
+          "jint": "2.11.58"
+        },
+        "compile": {
+          "lib/netstandard2.0/Jint.CommonJS.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Jint.CommonJS.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.0.0-preview3.19128.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.WindowsDesktop.App/3.0.0-preview3-27504-2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.NETCore.Targets": "2.0.0"
+        },
+        "compile": {
+          "ref/netcoreapp3.0/_._": {}
+        },
+        "build": {
+          "build/netcoreapp3.0/_._": {}
+        }
+      },
+      "runtime.win-x64.Microsoft.NETCore.DotNetAppHost/3.0.0-preview3-27503-5": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x64/native/_._": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AdvancedStringBuilder/0.1.0": {
+      "sha512": "IbN3r5whlJvi8MhCDPVpIb+NVScyUcKSdcJZrnoXFDyzPDISl3AbWouNBYIHRdZdfGuzqCQEhM1vkxbIKqQVaQ==",
+      "type": "package",
+      "path": "advancedstringbuilder/0.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "advancedstringbuilder.0.1.0.nupkg.sha512",
+        "advancedstringbuilder.nuspec",
+        "lib/net40-client/AdvancedStringBuilder.dll",
+        "lib/net40-client/AdvancedStringBuilder.xml",
+        "lib/net45/AdvancedStringBuilder.dll",
+        "lib/net45/AdvancedStringBuilder.xml",
+        "lib/netstandard1.0/AdvancedStringBuilder.dll",
+        "lib/netstandard1.0/AdvancedStringBuilder.xml",
+        "lib/netstandard2.0/AdvancedStringBuilder.dll",
+        "lib/netstandard2.0/AdvancedStringBuilder.xml"
+      ]
+    },
+    "JavaScriptEngineSwitcher.Core/3.1.0": {
+      "sha512": "UbyvwC+aSYwV76FDEa/C59lVzgBVdAuP/F4YpNfv+Ev+HllqLBgEhj8Hzo0pAk7uUGQwUxVnQBAtsINMy29ysQ==",
+      "type": "package",
+      "path": "javascriptengineswitcher.core/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "advanced-string-builder-license.txt",
+        "javascriptengineswitcher.core.3.1.0.nupkg.sha512",
+        "javascriptengineswitcher.core.nuspec",
+        "lib/net40-client/JavaScriptEngineSwitcher.Core.dll",
+        "lib/net40-client/JavaScriptEngineSwitcher.Core.xml",
+        "lib/net40-client/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "lib/net45/JavaScriptEngineSwitcher.Core.dll",
+        "lib/net45/JavaScriptEngineSwitcher.Core.xml",
+        "lib/net45/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Core.dll",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Core.xml",
+        "lib/netstandard1.3/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.xml",
+        "lib/netstandard2.0/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "readme.txt"
+      ]
+    },
+    "JavaScriptEngineSwitcher.Jint/3.1.0": {
+      "sha512": "DVeRasLBe76xlZ1pZjO5Q7aqUNlTXTA+u7Hm03aILrID+ZoEhIFCzpS6omw3L67zilKGb1XYXQNUFDGzQ5GauA==",
+      "type": "package",
+      "path": "javascriptengineswitcher.jint/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "advanced-string-builder-license.txt",
+        "javascriptengineswitcher.jint.3.1.0.nupkg.sha512",
+        "javascriptengineswitcher.jint.nuspec",
+        "jint-license.txt",
+        "lib/net40-client/JavaScriptEngineSwitcher.Jint.dll",
+        "lib/net40-client/JavaScriptEngineSwitcher.Jint.xml",
+        "lib/net45/JavaScriptEngineSwitcher.Jint.dll",
+        "lib/net45/JavaScriptEngineSwitcher.Jint.xml",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Jint.dll",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Jint.xml",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Jint.dll",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Jint.xml",
+        "readme.txt"
+      ]
+    },
+    "Jint/2.11.58": {
+      "sha512": "obRlPnuSmbjO7I2bfuKc1d+K1LB3xyg1Cnm2MT7PGUOHOntcdR96pDhsQnWBI5Dhxqr1Bj5/odpNi/B+AwVlPA==",
+      "type": "package",
+      "path": "jint/2.11.58",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jint.2.11.58.nupkg.sha512",
+        "jint.nuspec",
+        "lib/net40/Jint.dll",
+        "lib/net45/Jint.dll",
+        "lib/net451/Jint.dll",
+        "lib/netstandard1.3/Jint.dll",
+        "lib/netstandard2.0/Jint.dll"
+      ]
+    },
+    "Jint.CommonJS/1.0.14": {
+      "sha512": "YPoGe9HJtykHWPiZZcX0Fs5gXM5fAzuckAqUN4yMUZXYYP0WkmBuMzjhE1on1ZtRkzCAGVfJQTD9K4+5QMVffw==",
+      "type": "package",
+      "path": "jint.commonjs/1.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jint.commonjs.1.0.14.nupkg.sha512",
+        "jint.commonjs.nuspec",
+        "lib/netstandard2.0/Jint.CommonJS.dll"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/3.0.0-preview3.19128.7": {
+      "sha512": "4/k52fBHvM1RNPoBMik0Y3wIovsUGaTadNGH75iLGjQCJPRq2UBivEkhYrYkIFnu+K9kTYJcmXCDF6SFzMBrqA==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/3.0.0-preview3.19128.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.3.0.0-preview3.19128.7.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.NETCore.Targets/2.0.0": {
+      "sha512": "odP/tJj1z6GylFpNo7pMtbd/xQgTC3Ex2If63dRTL38bBNMwsBnJ+RceUIyHdRBC0oik/3NehYT+oECwBhIM3Q==",
+      "type": "package",
+      "path": "microsoft.netcore.targets/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.targets.2.0.0.nupkg.sha512",
+        "microsoft.netcore.targets.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.WindowsDesktop.App/3.0.0-preview3-27504-2": {
+      "sha512": "t7Iw6nkx03aOXgZ7L2ZJLN7hGY7FlUaxIyH6UbGhjHCJABxfV8Bx3xOe6E63xa1HVeoccCAdNPctTX2s2zj5SQ==",
+      "type": "package",
+      "path": "microsoft.windowsdesktop.app/3.0.0-preview3-27504-2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/netcoreapp3.0/Microsoft.WindowsDesktop.App.targets",
+        "build/netcoreapp3.0/ref-mscorlib/System.ComponentModel.dll",
+        "build/netcoreapp3.0/ref-mscorlib/System.Runtime.CompilerServices.VisualC.dll",
+        "build/netcoreapp3.0/ref-mscorlib/System.Runtime.dll",
+        "build/netcoreapp3.0/ref-mscorlib/mscorlib.dll",
+        "microsoft.windowsdesktop.app.3.0.0-preview3-27504-2.nupkg.sha512",
+        "microsoft.windowsdesktop.app.nuspec",
+        "ref/netcoreapp3.0/Accessibility.dll",
+        "ref/netcoreapp3.0/Microsoft.Win32.Registry.dll",
+        "ref/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
+        "ref/netcoreapp3.0/PresentationCore-CommonResources.dll",
+        "ref/netcoreapp3.0/PresentationCore.dll",
+        "ref/netcoreapp3.0/PresentationFramework.Aero.dll",
+        "ref/netcoreapp3.0/PresentationFramework.Aero2.dll",
+        "ref/netcoreapp3.0/PresentationFramework.AeroLite.dll",
+        "ref/netcoreapp3.0/PresentationFramework.Classic.dll",
+        "ref/netcoreapp3.0/PresentationFramework.Luna.dll",
+        "ref/netcoreapp3.0/PresentationFramework.Royale.dll",
+        "ref/netcoreapp3.0/PresentationFramework.dll",
+        "ref/netcoreapp3.0/PresentationUI.dll",
+        "ref/netcoreapp3.0/ReachFramework.dll",
+        "ref/netcoreapp3.0/System.CodeDom.dll",
+        "ref/netcoreapp3.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netcoreapp3.0/System.Design.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Design.dll",
+        "ref/netcoreapp3.0/System.Drawing.dll",
+        "ref/netcoreapp3.0/System.Printing.dll",
+        "ref/netcoreapp3.0/System.Security.AccessControl.dll",
+        "ref/netcoreapp3.0/System.Security.Cryptography.Cng.dll",
+        "ref/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll",
+        "ref/netcoreapp3.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netcoreapp3.0/System.Security.Cryptography.Xml.dll",
+        "ref/netcoreapp3.0/System.Security.Permissions.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Windows.Controls.Ribbon.dll",
+        "ref/netcoreapp3.0/System.Windows.Extensions.dll",
+        "ref/netcoreapp3.0/System.Windows.Forms.Design.Editors.dll",
+        "ref/netcoreapp3.0/System.Windows.Forms.Design.dll",
+        "ref/netcoreapp3.0/System.Windows.Forms.dll",
+        "ref/netcoreapp3.0/System.Windows.Input.Manipulations.dll",
+        "ref/netcoreapp3.0/System.Windows.Presentation.dll",
+        "ref/netcoreapp3.0/System.Xaml.dll",
+        "ref/netcoreapp3.0/UIAutomationClient.dll",
+        "ref/netcoreapp3.0/UIAutomationClientSideProviders.dll",
+        "ref/netcoreapp3.0/UIAutomationProvider.dll",
+        "ref/netcoreapp3.0/UIAutomationTypes.dll",
+        "ref/netcoreapp3.0/WindowsBase.dll",
+        "ref/netcoreapp3.0/WindowsFormsIntegration.dll",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "runtime.win-x64.Microsoft.NETCore.DotNetAppHost/3.0.0-preview3-27503-5": {
+      "sha512": "9xq1NTCrWg3A4/6K/COActt25NJaw1a6bx0CTIkgbYv2TkpveKXZCCSFyDnT5Ff9nBvZkBq4Y4r/tZNIU5T8pg==",
+      "type": "package",
+      "path": "runtime.win-x64.microsoft.netcore.dotnetapphost/3.0.0-preview3-27503-5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "runtime.win-x64.microsoft.netcore.dotnetapphost.3.0.0-preview3-27503-5.nupkg.sha512",
+        "runtime.win-x64.microsoft.netcore.dotnetapphost.nuspec",
+        "runtimes/win-x64/native/apphost.exe",
+        "runtimes/win-x64/native/comhost.dll",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "JavaScriptEngineSwitcher.Jint >= 3.1.0",
+      "Jint >= 2.11.58",
+      "Jint.CommonJS >= 1.0.14",
+      "Microsoft.NETCore.Platforms >= 3.0.0-preview3.19128.7",
+      "Microsoft.WindowsDesktop.App >= 3.0.0-preview3-27504-2",
+      "runtime.win-x64.Microsoft.NETCore.DotNetAppHost >= 3.0.0-preview3-27503-5"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Sovr6\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\JSparkerEngine.csproj",
+      "projectName": "JSparkerEngine",
+      "projectPath": "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\JSparkerEngine.csproj",
+      "packagesPath": "C:\\Users\\Sovr6\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Sovr6\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+        "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+        "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+        "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+        "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+        "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "JavaScriptEngineSwitcher.Jint": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
+          "Jint": {
+            "target": "Package",
+            "version": "[2.11.58, )"
+          },
+          "Jint.CommonJS": {
+            "target": "Package",
+            "version": "[1.0.14, )"
+          },
+          "Microsoft.NETCore.Platforms": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.0.0-preview3.19128.7, )",
+            "autoReferenced": true
+          },
+          "Microsoft.WindowsDesktop.App": {
+            "include": "None",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.0.0-preview3-27504-2, )",
+            "autoReferenced": true
+          },
+          "runtime.win-x64.Microsoft.NETCore.DotNetAppHost": {
+            "include": "None",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.0.0-preview3-27503-5, )",
+            "autoReferenced": true
+          }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "none"
+          }
+        }
+      }
+    }
+  }
+}
