@@ -1,0 +1,364 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "6dccb1b12a3d2ff52557fbb95cd5c294f7d13c90"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "JSparkerEngine/1.0.0": {
+        "dependencies": {
+          "IronPython": "2.7.9",
+          "IronPython.StdLib": "2.7.9",
+          "JavaScriptEngineSwitcher.Jint": "3.1.0",
+          "Jint": "2.11.58",
+          "Jint.CommonJS": "1.0.14"
+        },
+        "runtime": {
+          "JSparkerEngine.dll": {}
+        }
+      },
+      "AdvancedStringBuilder/0.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      },
+      "DynamicLanguageRuntime/1.2.2": {
+        "dependencies": {
+          "System.CodeDom": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.Dynamic.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.1000"
+          },
+          "lib/netcoreapp2.1/Microsoft.Scripting.Metadata.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.1000"
+          },
+          "lib/netcoreapp2.1/Microsoft.Scripting.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.1000"
+          }
+        }
+      },
+      "IronPython/2.7.9": {
+        "dependencies": {
+          "DynamicLanguageRuntime": "1.2.2",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/IronPython.Modules.dll": {
+            "assemblyVersion": "2.7.9.0",
+            "fileVersion": "2.7.9.1000"
+          },
+          "lib/netcoreapp2.1/IronPython.SQLite.dll": {
+            "assemblyVersion": "2.7.9.0",
+            "fileVersion": "2.7.9.1000"
+          },
+          "lib/netcoreapp2.1/IronPython.dll": {
+            "assemblyVersion": "2.7.9.0",
+            "fileVersion": "2.7.9.1000"
+          }
+        }
+      },
+      "IronPython.StdLib/2.7.9": {
+        "dependencies": {
+          "IronPython": "2.7.9"
+        }
+      },
+      "JavaScriptEngineSwitcher.Core/3.1.0": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll": {
+            "locale": "ru-ru"
+          }
+        }
+      },
+      "JavaScriptEngineSwitcher.Jint/3.1.0": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0",
+          "JavaScriptEngineSwitcher.Core": "3.1.0",
+          "Jint": "2.11.58"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Jint.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        }
+      },
+      "Jint/2.11.58": {
+        "runtime": {
+          "lib/netstandard2.0/Jint.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "2.11.58.0"
+          }
+        }
+      },
+      "Jint.CommonJS/1.0.14": {
+        "dependencies": {
+          "Jint": "2.11.58"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Jint.CommonJS.dll": {
+            "assemblyVersion": "1.0.14.0",
+            "fileVersion": "1.0.14.0"
+          }
+        }
+      },
+      "Microsoft.Win32.Registry/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.CodeDom/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtimeTargets": {
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JSparkerEngine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdvancedStringBuilder/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IbN3r5whlJvi8MhCDPVpIb+NVScyUcKSdcJZrnoXFDyzPDISl3AbWouNBYIHRdZdfGuzqCQEhM1vkxbIKqQVaQ==",
+      "path": "advancedstringbuilder/0.1.0",
+      "hashPath": "advancedstringbuilder.0.1.0.nupkg.sha512"
+    },
+    "DynamicLanguageRuntime/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xNsMK0WWX85K5CNIIdjiHa3Va6hIZA5/GRBoMYG7KJ+iU6pCFFJMmq/EL0QjHmzWO14PQqviIZ0JQHCArv4gjQ==",
+      "path": "dynamiclanguageruntime/1.2.2",
+      "hashPath": "dynamiclanguageruntime.1.2.2.nupkg.sha512"
+    },
+    "IronPython/2.7.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CXQT1XUPKapVZ1r4coR+lFlC1FEsI4sDJg/9iSug/fUnWuYZ8APAPFutPG09T2uwcsWk40s4ckqO27/dbsA6lw==",
+      "path": "ironpython/2.7.9",
+      "hashPath": "ironpython.2.7.9.nupkg.sha512"
+    },
+    "IronPython.StdLib/2.7.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uBBPURhEc0G132qXYCXcbXg0JGAgmahMrrEygAb1zuc1vipLmd4SpEeFmiqJTj9E6VOdkAmCQnVXMEVhd8vmNQ==",
+      "path": "ironpython.stdlib/2.7.9",
+      "hashPath": "ironpython.stdlib.2.7.9.nupkg.sha512"
+    },
+    "JavaScriptEngineSwitcher.Core/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UbyvwC+aSYwV76FDEa/C59lVzgBVdAuP/F4YpNfv+Ev+HllqLBgEhj8Hzo0pAk7uUGQwUxVnQBAtsINMy29ysQ==",
+      "path": "javascriptengineswitcher.core/3.1.0",
+      "hashPath": "javascriptengineswitcher.core.3.1.0.nupkg.sha512"
+    },
+    "JavaScriptEngineSwitcher.Jint/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DVeRasLBe76xlZ1pZjO5Q7aqUNlTXTA+u7Hm03aILrID+ZoEhIFCzpS6omw3L67zilKGb1XYXQNUFDGzQ5GauA==",
+      "path": "javascriptengineswitcher.jint/3.1.0",
+      "hashPath": "javascriptengineswitcher.jint.3.1.0.nupkg.sha512"
+    },
+    "Jint/2.11.58": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-obRlPnuSmbjO7I2bfuKc1d+K1LB3xyg1Cnm2MT7PGUOHOntcdR96pDhsQnWBI5Dhxqr1Bj5/odpNi/B+AwVlPA==",
+      "path": "jint/2.11.58",
+      "hashPath": "jint.2.11.58.nupkg.sha512"
+    },
+    "Jint.CommonJS/1.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YPoGe9HJtykHWPiZZcX0Fs5gXM5fAzuckAqUN4yMUZXYYP0WkmBuMzjhE1on1ZtRkzCAGVfJQTD9K4+5QMVffw==",
+      "path": "jint.commonjs/1.0.14",
+      "hashPath": "jint.commonjs.1.0.14.nupkg.sha512"
+    },
+    "Microsoft.Win32.Registry/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
+      "path": "microsoft.win32.registry/4.5.0",
+      "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "System.CodeDom/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gqpR1EeXOuzNQWL7rOzmtdIz3CaXVjSQCiaGOs2ivjPwynKSJYm39X81fdlp7WuojZs/Z5t1k5ni7HtKQurhjw==",
+      "path": "system.codedom/4.5.0",
+      "hashPath": "system.codedom.4.5.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YrzNWduCDHhUaSRBxHxL11UkM2fD6y8hITHis4/LbQZ6vj3vdRjoH3IoPWWC9uDXK2wHIqn+b5gv1Np/VKyM1g==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+      "path": "system.security.accesscontrol/4.5.0",
+      "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "path": "system.security.principal.windows/4.5.0",
+      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S0wEUiKcLvRlkFUXca8uio1UQ5bYQzYgOmOKtCqaBQC3GR9AJjh43otcM32IGsAyvadFTaAMw9Irm6dS4Evfng==",
+      "path": "system.text.encoding.codepages/4.5.0",
+      "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
+    }
+  }
+}
