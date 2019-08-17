@@ -27,7 +27,11 @@ So there is a lot in planned for this program, I am personally busy so it might 
 Hope this program helps you in your adventures into code!
 
 donations:
+
 BTC address: 3KJWZZBuZjrZAPsq1xmnDdQPf7CUUvp37c
+
 ETH address: 0x6F0501F14A5be3e2B6464C1d6b439E5bf75F48DA
+
 BCH addr: qqsm8g6vukxpd6ssjxm449g35cdew3dzlycfrap4dt
+
 Thank you!
