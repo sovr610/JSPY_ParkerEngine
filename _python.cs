@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
@@ -17,7 +15,7 @@ namespace JSparkerEngine
         }
 
         /// <summary>
-        /// a single line command of python to execute
+        ///     a single line command of python to execute
         /// </summary>
         /// <param name="cmd"></param>
         /// <returns></returns>
@@ -36,7 +34,7 @@ namespace JSparkerEngine
         }
 
         /// <summary>
-        /// execute a whole python file
+        ///     execute a whole python file
         /// </summary>
         /// <param name="file">filename</param>
         /// <param name="threaded">to run in a seperate thread if true</param>
@@ -67,19 +65,17 @@ namespace JSparkerEngine
         }
 
         /// <summary>
-        /// same as running a python file, but treated as an app.
+        ///     same as running a python file, but treated as an app.
         /// </summary>
         /// <param name="file">app name</param>
         public void RunPythonApp(string file)
         {
             ExecutePythonFile(Environment.CurrentDirectory + "\\apps\\" + file + ".py", true);
         }
-
-
     }
 
     /// <summary>
-    /// for multi-threading the python file execution
+    ///     for multi-threading the python file execution
     /// </summary>
     internal class threadPython
     {

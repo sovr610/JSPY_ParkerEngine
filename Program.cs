@@ -1,36 +1,101 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using Jint;
 
 namespace JSparkerEngine
 {
-    class ProgramCore
+    internal class ProgramCore
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            ProgramCore prm = new ProgramCore();
+            var prm = new ProgramCore();
             Console.WriteLine(" _ -- Welcome To JSPY-Parker-Engine 1.0v -- _");
             Console.WriteLine("note: would have a nice gui, but .net core... you know. Might do it in electron.js");
+
+            Console.WriteLine("Coomand Prompt Mode: /start to start engine");
+            while (true)
+            {
+                Console.Write(":> ");
+                string r = Console.ReadLine();
+
+                if(r == "/start")
+                {
+                    break;
+                }
+
+                prm.ExecuteCommandSync(r);
+
+
+            }
+
+
             Console.WriteLine("type /open to open a javascript/python file");
+            Console.WriteLine("");
+            Console.Write("Do you want python or javascript? or JSPY (javascript & python merged) (p, j or jspy): ");
+            var type = Console.ReadLine().Trim();
 
-            Console.Write("Do you want python or javascript? (p or j)?");
-            string type = Console.ReadLine().Trim();
 
+            if (type.ToLower() == "jspy")
+            {
+                var core = new JScore();
+                var main_engine = core.createEngine();
+                var ee = prm.addModules(core.getJSengine(main_engine));
+                core.setJSEngine(ee, main_engine);
+                var python = new PythonClass();
+                while (true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write(":");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("> ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    var cmd = Console.ReadLine();
+
+                    try
+                    {
+                        object ret_final = null;
+                        try
+                        {
+                            var ret = core.executeJSprogramWithReturn(main_engine, cmd);
+                            ret_final = ret;
+                        }
+                        catch (Exception ii)
+                        {
+                        }
+
+                        var check = false;
+                        try
+                        {
+                            check = python.ExecutePythonCommand(cmd);
+                        }
+                        catch (Exception ii)
+                        {
+                        }
+
+                        Console.WriteLine("JS: " + ret_final + ", PY:" + Convert.ToString(check));
+                    }
+                    catch (Exception i)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
 
             if (type.ToLower() == "j")
             {
-
                 Console.WriteLine("");
 
 
-                JScore core = new JScore();
-                int main_engine = core.createEngine();
+                var core = new JScore();
+                var main_engine = core.createEngine();
 
                 Console.Write("Do you want to add modules to the javascript? and add C# functions? (Y/N): ");
-                string check = Console.ReadLine().Trim().ToLower();
+                var check = Console.ReadLine().Trim().ToLower();
                 if (check == "y")
                 {
-                    Engine ee = prm.addModules(core.getJSengine(main_engine));
+                    var ee = prm.addModules(core.getJSengine(main_engine));
                     core.setJSEngine(ee, main_engine);
                 }
 
@@ -39,17 +104,16 @@ namespace JSparkerEngine
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.Write(":> ");
                     Console.ForegroundColor = ConsoleColor.White;
-                    string cmd = Console.ReadLine();
+                    var cmd = Console.ReadLine();
                     if (cmd != "")
                     {
                         if (cmd.Trim() == "/open")
                         {
                             Console.WriteLine("Please enter or paste the directory:");
-                            string dir = Console.ReadLine();
+                            var dir = Console.ReadLine();
                             try
                             {
-                                core.executeJSCode(main_engine,System.IO.File.ReadAllText(dir));
-
+                                core.executeJSCode(main_engine, File.ReadAllText(dir));
                             }
                             catch (Exception i)
                             {
@@ -58,7 +122,7 @@ namespace JSparkerEngine
                         }
                         else
                         {
-                            object ret = core.executeJSprogramWithReturn(main_engine, cmd);
+                            var ret = core.executeJSprogramWithReturn(main_engine, cmd);
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine(ret);
                             Console.ForegroundColor = ConsoleColor.White;
@@ -66,26 +130,24 @@ namespace JSparkerEngine
                     }
                 }
             }
-            else
-            {
 
-                PythonClass python = new PythonClass();
+            {
+                var python = new PythonClass();
                 while (true)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write(":> ");
                     Console.ForegroundColor = ConsoleColor.White;
-                    string cmd = Console.ReadLine();
+                    var cmd = Console.ReadLine();
                     if (cmd != "")
                     {
                         if (cmd.Trim() == "/open")
                         {
                             Console.WriteLine("Please enter or paste the directory:");
-                            string dir = Console.ReadLine();
+                            var dir = Console.ReadLine();
                             try
                             {
                                 python.ExecutePythonFile(dir, false);
-
                             }
                             catch (Exception i)
                             {
@@ -98,6 +160,41 @@ namespace JSparkerEngine
                         }
                     }
                 }
+            }
+        }
+
+        public Exception ExecuteCommandSync(object command)
+        {
+            try
+            {
+                // create the ProcessStartInfo using "cmd" as the program to be run,
+                // and "/c " as the parameters.
+                // Incidentally, /c tells cmd that we want it to execute the command that follows,
+                // and then exit.
+                var procStartInfo =
+                    new ProcessStartInfo("cmd", "/c " + command)
+                    {
+                        RedirectStandardOutput = true,
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    };
+
+                // The following commands are needed to redirect the standard output.
+                // This means that it will be redirected to the Process.StandardOutput StreamReader.
+                // Do not create the black window.
+                // Now we create a process, assign its ProcessStartInfo and start it
+                var proc = new Process { StartInfo = procStartInfo };
+                proc.Start();
+                // Get the output into a string
+                var result = proc.StandardOutput.ReadToEnd();
+                // Display the command output.
+                Console.WriteLine(result);
+                return null;
+            }
+            catch (Exception objException)
+            {
+                return objException;
+                // Log the exception
             }
         }
 
