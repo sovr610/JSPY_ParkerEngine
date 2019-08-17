@@ -14,7 +14,7 @@ Make sure you have .net Core 2.1 runtime and the python runs on IronPython so ac
 Well I mainly wanted a terminal like system that could run JavaScript mainly and why not add in python, and why not have a kinda, sorta hybrid of the two? Well I think that part is cool, but either way it is something to have javascript run in a terminal. 
 
 ### Future!
-So there is a lot in planned for this program, I am personally busy so it might take a while for me to finish everything, Features:
+So there is a lot in planned things for this program, I am personally busy so it might take a while for me to finish everything, Features:
 
 - Add more C# functions in the JavaScript as custom JavaScript functions (like how adding System.IO.File from C# to javascript)
   - File, WebClient, HttpClient, bash/shell commands, and many more!
