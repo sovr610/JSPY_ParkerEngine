@@ -2,7 +2,7 @@
 
 ## Run javascript with python on the terminal
 
-JSPY is mainly built for windows, but since written in .net Core will be workable on macOS and Linux. The proper way to use JSPY is to run javascript either on a command line or through a javaScript file and same for python. For windows it has the command prompt integrated so you can perform simple shell commands like "dir" or "mkdir". 
+JSPY is mainly built for windows, but since written in .net Core will be workable on macOS and Linux. The proper way to use JSPY is to run javascript either on the console application or through a javaScript file and same for python. For windows it has the command prompt integrated so you can perform simple shell commands like "dir" or "mkdir". I consider this program as of 8/16/2019 a Beta and not fully done so there might seem like features are missing, or things could be done a little better, don't worry I am working on it.
 
 ## How to run?
 
@@ -16,13 +16,16 @@ Well I mainly wanted a terminal like system that could run JavaScript mainly and
 ### Future!
 So there is a lot in planned things for this program, I am personally busy so it might take a while for me to finish everything, Features:
 
-- Add more C# functions in the JavaScript as custom JavaScript functions (like how adding System.IO.File from C# to javascript)
+- [ ] add bash and OS detection so it is not just the command line integrated.
+- [ ] ability to install global npm packages and use them on the console app (using require('module'))
+- [ ] combine the JS and PY with command prompt/Termainl commands (you will understand once you use it)
+- [ ] Add more C# functions in the JavaScript as custom JavaScript functions (like how adding System.IO.File from C# to javascript)
   - File, WebClient, HttpClient, bash/shell commands, and many more!
-- Add a seperate .dll library for javascript and python to be added to C# projects.
-- Add a proper installer, to add the console and add the program as a native command in windows command prompt.
-- Add a simple electron.js GUI app (working in progress)
-- Ability to add .dll libraries as plugins to add 3rd party javascript and python custom functions.
-- Ability to generate GUI's through electron, generating HTML tags and design through javascript or python
+- [ ] Add a seperate .dll library for javascript and python to be added to C# projects.
+- [ ] Add a proper installer, to add the console and add the program as a native command in windows command prompt.
+- [ ] Add a simple electron.js GUI app (working in progress)
+- [ ] Ability to add .dll libraries as plugins to add 3rd party javascript and python custom functions.
+- [ ] Ability to generate GUI's through electron, generating HTML tags and design through javascript or python
 
 Hope this program helps you in your adventures into code!
 
