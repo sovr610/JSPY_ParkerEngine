@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\JSparkerEngine.csproj": {}
+    "C:\\Users\\Sovr6\\OneDrive\\Desktop\\JSPY_ParkerEngine\\JSparkerEngine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\JSparkerEngine.csproj": {
+    "C:\\Users\\Sovr6\\OneDrive\\Desktop\\JSPY_ParkerEngine\\JSparkerEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\JSparkerEngine.csproj",
+        "projectUniqueName": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\JSPY_ParkerEngine\\JSparkerEngine.csproj",
         "projectName": "JSparkerEngine",
-        "projectPath": "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\JSparkerEngine.csproj",
+        "projectPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\JSPY_ParkerEngine\\JSparkerEngine.csproj",
         "packagesPath": "C:\\Users\\Sovr6\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sovr6\\source\\repos\\JSparkerEngine\\JSparkerEngine\\obj\\",
+        "outputPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\JSPY_ParkerEngine\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,7 +21,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -34,7 +34,7 @@
           "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -45,8 +45,16 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp2.1": {
           "dependencies": {
+            "IronPython": {
+              "target": "Package",
+              "version": "[2.7.9, )"
+            },
+            "IronPython.StdLib": {
+              "target": "Package",
+              "version": "[2.7.9, )"
+            },
             "JavaScriptEngineSwitcher.Jint": {
               "target": "Package",
               "version": "[3.1.0, )"
@@ -59,37 +67,22 @@
               "target": "Package",
               "version": "[1.0.14, )"
             },
-            "Microsoft.NETCore.Platforms": {
+            "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview3.19128.7, )",
+              "version": "[2.1.0, )",
               "autoReferenced": true
             },
-            "Microsoft.WindowsDesktop.App": {
-              "include": "None",
-              "suppressParent": "All",
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[3.0.0-preview3-27504-2, )",
-              "autoReferenced": true
-            },
-            "runtime.win-x64.Microsoft.NETCore.DotNetAppHost": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview3-27503-5, )",
-              "autoReferenced": true
+              "version": "[12.0.2, )"
             }
           },
           "imports": [
             "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "none"
-            }
-          }
+          "warn": true
         }
       }
     }

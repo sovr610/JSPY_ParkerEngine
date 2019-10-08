@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using Jint;
+using Newtonsoft.Json;
 
 namespace JSparkerEngine
 {
@@ -9,156 +11,252 @@ namespace JSparkerEngine
     {
         private static void Main(string[] args)
         {
+            string type = "";
             var prm = new ProgramCore();
-            Console.WriteLine(" _ -- Welcome To JSPY-Parker-Engine 1.0v -- _");
-            Console.WriteLine("note: would have a nice gui, but .net core... you know. Might do it in electron.js");
-
-            Console.WriteLine("Coomand Prompt Mode: /start to start engine");
-            while (true)
+            if (args != null)
             {
-                Console.Write(":> ");
-                string r = Console.ReadLine();
-
-                if(r == "/start")
-                {
-                    break;
-                }
-
-                prm.ExecuteCommandSync(r);
-
-
-            }
-
-
-            Console.WriteLine("type /open to open a javascript/python file");
-            Console.WriteLine("");
-            Console.Write("Do you want python or javascript? or JSPY (javascript & python merged) (p, j or jspy): ");
-            var type = Console.ReadLine().Trim();
-
-
-            if (type.ToLower() == "jspy")
-            {
-                var core = new JScore();
-                var main_engine = core.createEngine();
-                var ee = prm.addModules(core.getJSengine(main_engine));
-                core.setJSEngine(ee, main_engine);
-                var python = new PythonClass();
+                Console.WriteLine(" _ -- Welcome To JSPY-Parker-Engine 1.0v -- _");
+                Console.WriteLine("note: would have a nice gui, but .net core... you know. Might do it in electron.js");
+                Console.WriteLine("make sure to add me to the PATH :)");
+                Console.WriteLine("Comand Prompt Mode: /start to start engine or enter windows command line commands");
                 while (true)
                 {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write(":");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("> ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    var cmd = Console.ReadLine();
+                    Console.Write(":> ");
+                    string r = Console.ReadLine();
 
-                    try
+                    if (r == "/start")
                     {
-                        object ret_final = null;
-                        try
-                        {
-                            var ret = core.executeJSprogramWithReturn(main_engine, cmd);
-                            ret_final = ret;
-                        }
-                        catch (Exception ii)
-                        {
-                        }
-
-                        var check = false;
-                        try
-                        {
-                            check = python.ExecutePythonCommand(cmd);
-                        }
-                        catch (Exception ii)
-                        {
-                        }
-
-                        Console.WriteLine("JS: " + ret_final + ", PY:" + Convert.ToString(check));
+                        break;
                     }
-                    catch (Exception i)
-                    {
-                        Console.WriteLine(i);
-                    }
+
+                    prm.ExecuteCommandSync(r);
+
+
                 }
-            }
 
-            if (type.ToLower() == "j")
-            {
+
+                Console.WriteLine("type /open to open a javascript/python file");
                 Console.WriteLine("");
+                Console.Write("Do you want python or javascript? or JSPY (javascript & python merged) (p, j or jspy): ");
+                type = Console.ReadLine().Trim();
 
+ 
 
-                var core = new JScore();
-                var main_engine = core.createEngine();
-
-                Console.Write("Do you want to add modules to the javascript? and add C# functions? (Y/N): ");
-                var check = Console.ReadLine().Trim().ToLower();
-                if (check == "y")
+                if (type.ToLower() == "jspy")
                 {
-                    var ee = prm.addModules(core.getJSengine(main_engine));
-                    core.setJSEngine(ee, main_engine);
-                }
+                    var core = new JScore();
+                    var main_engine = core.createEngine();
 
-                while (true)
-                {
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.Write(":> ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    var cmd = Console.ReadLine();
-                    if (cmd != "")
+
+                    var python = new PythonClass();
+                    while (true)
                     {
-                        if (cmd.Trim() == "/open")
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write(":");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("> ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        var cmd = Console.ReadLine();
+
+                        try
                         {
-                            Console.WriteLine("Please enter or paste the directory:");
-                            var dir = Console.ReadLine();
+                            object ret_final = null;
                             try
                             {
-                                core.executeJSCode(main_engine, File.ReadAllText(dir));
+                                if (System.IO.File.Exists(Environment.CurrentDirectory + "\\temp.js"))
+                                {
+                                    File.Delete(Environment.CurrentDirectory + "\\temp.js");
+                                }
+                                File.WriteAllText(Environment.CurrentDirectory + "\\temp.js", cmd);
+                                var ret = core.executeJSCode(main_engine, "", "./temp");
+                                ret_final = ret;
                             }
-                            catch (Exception i)
+                            catch (Exception ii)
                             {
-                                Console.WriteLine(i);
+                            }
+
+                            var check = false;
+                            try
+                            {
+                                check = python.ExecutePythonCommand(cmd);
+                            }
+                            catch (Exception ii)
+                            {
+                            }
+
+                            Console.WriteLine("JS: " + ret_final + ", PY:" + Convert.ToString(check));
+                        }
+                        catch (Exception i)
+                        {
+                            Console.WriteLine(i);
+                        }
+                    }
+                }
+
+                if (type.ToLower() == "j")
+                {
+                    Console.WriteLine("");
+
+
+                    var core = new JScore();
+                    var main_engine = core.createEngine();
+
+                    Console.Write("Do you want to add modules to the javascript? and add C# functions? (Y/N): ");
+                    var check = Console.ReadLine().Trim().ToLower();
+                    if (check == "y")
+                    {
+
+                    }
+
+                    while (true)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.Write(":> ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        var cmd = Console.ReadLine();
+                        if (cmd != "")
+                        {
+                            if (cmd.Trim() == "/open")
+                            {
+                                Console.WriteLine("Please enter or paste the directory:");
+                                var dir = Console.ReadLine();
+                                try
+                                {
+                                    dir = dir.Substring(0, dir.Length - 3).Replace("\\", "/");
+                                    core.executeJSCode(main_engine, "", dir);
+                                }
+                                catch (Exception i)
+                                {
+                                    Console.WriteLine(i);
+                                }
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    if (System.IO.File.Exists(Environment.CurrentDirectory + "\\temp.js"))
+                                    {
+                                        File.Delete(Environment.CurrentDirectory + "\\temp.js");
+                                    }
+                                    string[] deps =
+                                    {
+                                        "var File = require(\"file\");",
+                                        "var Zip = require(\"zip\");",
+                                        "var WebClient = require(\"webClient\");",
+                                        "var Math = require(\"math\");",
+                                        "var Environment = require(\"Environment\");",
+                                        "var console = require(\"console\");",
+                                        "var stringBuilder = require(\"stringBuilder\");",
+                                        "var array = require(\"Array\");",
+                                        "var directory = require(\"Directory\");",
+                                        "var proccess = require(\"Process\");",
+                                        "var driveInfo = require(\"DriveInfo\");",
+                                        "var exception = require(\"Exception\");",
+                                        "var thread = require(\"Thread\");",
+                                        "var encoding = require(\"Encoding\");",
+                                        "var smtpClient = require(\"SmtpClient\");",
+                                        "var cultureInfo = require(\"CultureInfo\");"
+                                    };
+
+                                    string[] init =
+                                    {
+                                        //s"var file = new File();",
+                                        //"var zip = new Zip();",
+                                        //"var web = new WebClient();",
+                                        //"var math = new math();"
+                                        //"var env = new Environment();",
+                                    };
+
+                                    string[] code = { cmd };
+
+                                    List<string> arr = new List<string>();
+                                    arr.AddRange(deps);
+                                    arr.AddRange(init);
+                                    arr.AddRange(code);
+
+                                    File.WriteAllLines(Environment.CurrentDirectory + "\\temp.js", arr.ToArray());
+                                    var ret = core.executeJSCode(main_engine, "", "./temp");
+                                    Console.ForegroundColor = ConsoleColor.Yellow;
+                                    Console.WriteLine(ret);
+                                    Console.ForegroundColor = ConsoleColor.White;
+                                }
+                                catch (Exception i)
+                                {
+                                    Console.WriteLine(i);
+                                }
                             }
                         }
-                        else
+                    }
+                }
+                if(type == "p")
+                {
+                    var python = new PythonClass();
+                    while (true)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(":> ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        var cmd = Console.ReadLine();
+                        if (cmd != "")
                         {
-                            var ret = core.executeJSprogramWithReturn(main_engine, cmd);
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine(ret);
-                            Console.ForegroundColor = ConsoleColor.White;
+                            if (cmd.Trim() == "/open")
+                            {
+                                Console.WriteLine("Please enter or paste the directory:");
+                                var dir = Console.ReadLine();
+                                try
+                                {
+                                    python.ExecutePythonFile(dir, false);
+                                }
+                                catch (Exception i)
+                                {
+                                    Console.WriteLine(i);
+                                }
+                            }
+                            else
+                            {
+                                python.ExecutePythonCommand(cmd);
+                            }
                         }
                     }
                 }
             }
-
+            else
             {
-                var python = new PythonClass();
-                while (true)
+                try
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write(":> ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    var cmd = Console.ReadLine();
-                    if (cmd != "")
+                    string file = args[0];
+                    if (file.Contains(".js"))
                     {
-                        if (cmd.Trim() == "/open")
+                        var core = new JScore();
+                        var main_engine = core.createEngine();
+                        string module = file.Substring(0, file.Length - 3).Replace("\\", "/");
+                        core.executeJSCode(main_engine, "", module);
+                    }
+
+                    if (file.Contains(".json"))
+                    {
+                        string json = System.IO.File.ReadAllText(file);
+                        var dat = JsonConvert.DeserializeObject<jsonDat>(json);
+                        var core = new JScore();
+                        var main_engine = core.createEngine();
+                        foreach (string j in dat.javaScript)
                         {
-                            Console.WriteLine("Please enter or paste the directory:");
-                            var dir = Console.ReadLine();
-                            try
-                            {
-                                python.ExecutePythonFile(dir, false);
-                            }
-                            catch (Exception i)
-                            {
-                                Console.WriteLine(i);
-                            }
-                        }
-                        else
-                        {
-                            python.ExecutePythonCommand(cmd);
+                            string module = j.Substring(0, file.Length - 3).Replace("\\", "/");
+                            core.executeJSCode(main_engine, "", module);
                         }
                     }
+
+                    if (file.Contains(".py"))
+                    {
+                        var python = new PythonClass();
+                        string dat = File.ReadAllText(file);
+                        python.ExecutePythonCommand(dat);
+                    }
+                }
+                catch(Exception i)
+                {
+                    Console.WriteLine(i);
                 }
             }
         }
@@ -198,26 +296,11 @@ namespace JSparkerEngine
             }
         }
 
-        public Engine addModules(Engine e)
-        {
-            Console.Clear();
-            Console.Write("Add System.IO.File methods? (Y/N): ");
-            if (Console.ReadLine().Trim().ToLower() == "y")
-            {
-                e.SetValue("writeFile", new Action<string, string>(File.WriteAllText));
-                e.SetValue("deleteFile", new Action<string>(File.Delete));
-                e.SetValue("fileExists", new Func<string, bool>(File.Exists));
-                e.SetValue("readFile", new Func<string, string>(File.ReadAllText));
-            }
 
-            Console.WriteLine("added function: writeFile(string name, string text)");
-            Console.WriteLine("added function: deleteFile(string name)");
-            Console.WriteLine("added function: bool : fileExists(string name)");
-            Console.WriteLine("added function: string : readFile(string name)");
-            Console.WriteLine("Press enter to continue...");
-            Console.ReadLine();
+    }
 
-            return e;
-        }
+    public class jsonDat
+    {
+        public string[] javaScript;
     }
 }

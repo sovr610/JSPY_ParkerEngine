@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "6dccb1b12a3d2ff52557fbb95cd5c294f7d13c90"
+    "signature": "ab221f9e21653f568f4b64590112f43cb95c2d90"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,8 @@
           "IronPython.StdLib": "2.7.9",
           "JavaScriptEngineSwitcher.Jint": "3.1.0",
           "Jint": "2.11.58",
-          "Jint.CommonJS": "1.0.14"
+          "Jint.CommonJS": "1.0.14",
+          "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
           "JSparkerEngine.dll": {}
@@ -133,6 +134,14 @@
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
           }
         }
       },
@@ -303,6 +312,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "System.CodeDom/4.5.0": {
       "type": "package",

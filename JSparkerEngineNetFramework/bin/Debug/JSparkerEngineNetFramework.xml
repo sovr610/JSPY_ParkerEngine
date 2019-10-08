@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JSparkerEngineNetFramework</name>
+    </assembly>
+    <members>
+        <member name="M:JSparkerEngine.PythonClass.ExecutePythonCommand(System.String)">
+            <summary>
+                a single line command of python to execute
+            </summary>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JSparkerEngine.PythonClass.ExecutePythonFile(System.String,System.Boolean)">
+            <summary>
+                execute a whole python file
+            </summary>
+            <param name="file">filename</param>
+            <param name="threaded">to run in a seperate thread if true</param>
+            <returns>if successful or not</returns>
+        </member>
+        <member name="M:JSparkerEngine.PythonClass.RunPythonApp(System.String)">
+            <summary>
+                same as running a python file, but treated as an app.
+            </summary>
+            <param name="file">app name</param>
+        </member>
+        <member name="T:JSparkerEngine.threadPython">
+            <summary>
+                for multi-threading the python file execution
+            </summary>
+        </member>
+    </members>
+</doc>

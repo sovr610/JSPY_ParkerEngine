@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSparkerEngine", "JSparkerE
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "JSPYgui", "..\JSPYgui\JSPYgui.njsproj", "{7E217D1B-9F2B-4922-83C5-F2A4E5982B57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSparkerEngineNetFramework", "..\JSparkerEngineNetFramework\JSparkerEngineNetFramework.csproj", "{630E8256-A785-4DCF-9C18-90C76B3271AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7E217D1B-9F2B-4922-83C5-F2A4E5982B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E217D1B-9F2B-4922-83C5-F2A4E5982B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E217D1B-9F2B-4922-83C5-F2A4E5982B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{630E8256-A785-4DCF-9C18-90C76B3271AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630E8256-A785-4DCF-9C18-90C76B3271AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630E8256-A785-4DCF-9C18-90C76B3271AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630E8256-A785-4DCF-9C18-90C76B3271AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
